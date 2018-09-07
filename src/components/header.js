@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return <header style={style.welcomeWrapper}>
       <div>
-        <img style={style.welcomeCrest} src={crest}/>
+        <img style={style.welcomeCrest} src={crest} alt=''/>
         <h1 style={style.welcomeh1}>WELCOME TO ARANOR</h1>
       </div>
     </header>;

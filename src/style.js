@@ -12,7 +12,7 @@ const style = {
     height: '102vh',
     transform: 'translate(-1%, -1%)',
     objectFit: 'cover',
-    transition: 'filter 0.5s'
+    transition: 'all 2s'
   },
   backgroundImageBlur: {
     width: '102vw',
