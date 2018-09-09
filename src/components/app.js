@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
 import style from '../style.js';
+import crest from '../images/aranor-logo.png';
 
-import Header from './header';
+import Background from './background';
+import AuthWelcome from './auth/welcome';
 
 class App extends Component {
   constructor(props) {
@@ -21,13 +23,17 @@ class App extends Component {
   render() {
     const { loaded } = this.state;
 
-    return (
-      <div style={style.appWrapper} className='app-wrapper'>
-        <main style={style.main} >
-          <Header loaded={loaded}/>
-        </main>
-      </div>
-    );
+    return [<Background loaded={ loaded }/>,
+      <main style={ style.main } >
+        <img style={ loaded ? style.crestAnim : style.crest }
+          src={ crest } alt=''/>
+        <h1 style={ loaded ?
+          style.welcomeTitleAnim : style.welcomeTitle }>
+          WELCOME TO ARANOR
+        </h1>
+        <AuthWelcome loaded={ loaded }/>
+      </main>
+    ];
   }
 }
 
