@@ -8,7 +8,7 @@ const baseStyles = {
   },
   crest: {
     marginTop: '10vh',
-    marginLeft: '2%',
+    paddingLeft: '2%',
     transition: 'transform 2s'
   },
   welcomeTitle: {
