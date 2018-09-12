@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AnimateHeight from 'react-animate-height';
-import style from '../../style.js';
+import style from '../../style/style';
 import crest from '../../images/aranor-logo.png';
 
 

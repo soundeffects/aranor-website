@@ -60,11 +60,13 @@ const style = {
     margin: '0.2em',
     padding: '1em',
     width: '24em',
+    maxHeight: '50vh',
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    borderRadius: '4px'
+    borderRadius: '4px',
+    overflowY: 'scroll'
   },
   button: (color, mode) => {
     var backgroundColor;
@@ -90,6 +92,8 @@ const style = {
       width: '70%',
       outline: '0',
       transition: 'all 0.1s',
+      textDecoration: 'none',
+      textAlign: 'center',
       ...shrink
     }
   }

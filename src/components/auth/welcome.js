@@ -5,9 +5,9 @@ import Button from '../basic/button';
 class AuthWelcome extends Component {
   render() {
     return [
-      <Button color='white'>Login</Button>,
-      <Button color='white'>About</Button>,
-      <Button color='white'>Apply</Button>
+      <Button color='white' to='#'>Login</Button>,
+      <Button color='white' to='about'>About</Button>,
+      <Button color='white' to='#'>Apply</Button>
     ];
   }
 }

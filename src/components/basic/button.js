@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import style from '../../style';
+import { Link } from 'react-router-dom';
+import style from '../../style/style';
 
 
 class Button extends Component {
@@ -33,14 +34,15 @@ class Button extends Component {
   }
 
   render() {
-    return <button
+    return <Link
       onMouseEnter={ this.handleStartHover }
       onMouseLeave={ this.handleEndHover }
       onMouseDown={ this.handleStartPressed }
       onMouseUp={ this.handleEndPressed }
-      style={style.button(this.props.color, this.state.mode)}>
+      style={style.button(this.props.color, this.state.mode)}
+      to={ this.props.to }>
       {this.props.children}
-    </button>;
+    </Link>;
   }
 }
 
