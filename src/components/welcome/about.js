@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Button from '../basic/button';
 
 
-class AuthAbout extends Component {
+class WelcomeAbout extends Component {
   render() {
     return [
       <p>The beginnings of Aranor go back to the early days of Chronicles of Elyria’s inception.
@@ -45,9 +46,10 @@ class AuthAbout extends Component {
       other games while we wait for Chronicles of Elyria to be released. While we are known for joking and
       elbowing amongst ourselves we are united when it comes to our purpose of establishing a kingdom that
       allows opportunity and a voice for all. We welcome everyone to visit us and join us if Aranor is what you
-      seek.</p>
+      seek.</p>,
+      <Button color='white' to='/'>Back</Button>
     ];
   }
 }
 
-export default AuthAbout;
+export default WelcomeAbout;

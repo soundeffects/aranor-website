@@ -57,16 +57,19 @@ const style = {
   },
   glass: {
     background: 'rgba(15, 10, 0, 0.6)',
-    margin: '0.2em',
     padding: '1em',
     width: '24em',
-    maxHeight: '50vh',
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
+  },
+  scrollGlass: {
+    borderRadius: '4px'
+  },
+  scrollGlassThumb: {
     borderRadius: '4px',
-    overflowY: 'scroll'
+    backgroundColor: 'rgba(255, 255, 255, 0.1)'
   },
   button: (color, mode) => {
     var backgroundColor;
