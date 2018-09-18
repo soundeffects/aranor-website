@@ -4,17 +4,31 @@ import Scrollbars from 'react-custom-scrollbars';
 import { Route } from 'react-router-dom';
 import WelcomeMenu from './menu';
 import WelcomeAbout from './about';
+import WelcomeLogin from './login';
 import styles from '../../style/style';
 import crest from '../../images/aranor-logo.png';
 
 
 class WelcomeRoot extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loaded: false
+    }
+  }
+
+  componentDidMount() {
+    setTimeout(function()
+      { this.setState({ loaded: true })
+    }.bind(this), 1000);
+  }
+
   renderThumb({ style, ...props }) {
     return <div style={{ ...style, ...styles.scrollGlassThumb }} {...props}/>;
   }
 
   render() {
-    const { loaded } = this.props;
+    const { loaded } = this.state;
 
     return [
       <img style={ loaded ? styles.crestAnim : styles.crest }
@@ -29,11 +43,12 @@ class WelcomeRoot extends Component {
           <Scrollbars
             renderThumbVertical={this.renderThumb}
             autoHeight
-            autoHeightMax={600}
+            autoHeightMax={400}
             style={ styles.scrollGlass }>
             <section style={ styles.glass }>
               <Route path='/' exact component={WelcomeMenu}/>
               <Route path='/about' component={WelcomeAbout}/>
+              <Route path='/login' component={WelcomeLogin}/>
             </section>
           </Scrollbars>
         </AnimateHeight>
